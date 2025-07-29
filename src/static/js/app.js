@@ -54,6 +54,7 @@ function TodoListCard() {
             <AddItemForm onNewItem={onNewItem} />
             {items.length === 0 && (
                 <p className="text-center">You have no todo items yet! Add one above!</p>
+                <p className="text-center">Add your text right now and right here!</p>
             )}
             {items.map(item => (
                 <ItemDisplay
@@ -102,7 +103,7 @@ function AddItemForm({ onNewItem }) {
                 <InputGroup.Append>
                     <Button
                         type="submit"
-                        variant="success"
+                        variant="primary"
                         disabled={!newItem.length}
                         className={submitting ? 'disabled' : ''}
                     >
